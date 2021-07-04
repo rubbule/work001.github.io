@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<div class="layui-carousel" id="test1" lay-filter="test1">
+    <div carousel-item="">
+        <div><img src="img/b.jpg" alt=""></div>
+        <div><img src="img/c.jpg" alt=""></div>
+        <div><img src="img/d.jpg" alt=""></div>
+        <div><img src="img/e.jpg" alt=""></div>
+    </div>
+</div>
+
+</body>
+<!-- 注意：如果你直接复制所有代码到本地，上述 JS 路径需要改成你本地的 -->
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel
+            ,form = layui.form;
+
+        //常规轮播
+        carousel.render({
+            elem: '#test1'
+            ,arrow: 'always',
+            width: 533,
+            height: 300,
+            interval: 1000,
+            anim:'fade',
+            anim:'updown'
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的页面</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="logincss/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header" style="background-color:#009688">
+        <div class="layui-logo layui-hide-xs layui-bg-green">五邑大学</div>
+        <!-- 头部区域（可配合layui 已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left" >
+            <!-- 移动端显示 -->
+            <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                <i class="layui-icon layui-icon-spread-left"></i>
+            </li>
+
+            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-util" style="font-size: 15px; color: #00F7DE;"></i> 系统管理</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-file" style="font-size: 15px; color: #00F7DE;"></i>内容管理</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-login-wechat" style="font-size: 15px; color: #00F7DE;"></i>微信公众</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-tabs" style="font-size: 15px; color: #00F7DE;"></i>文档内容</a></li>
+
+
+
+        </ul>
+        <ul class="layui-nav layui-layout-right" >
+<!--            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-screen-full" style="font-size: 15px; color: #00F7DE;"></i>全屏</a></li>-->
+<!--            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-password" style="font-size: 15px; color: #00F7DE;"></i>锁屏</a></li>-->
+<!--            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-snowflake" style="font-size: 15px; color: #00F7DE;"></i>清除缓存</a></li>-->
+<!--            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-set" style="font-size: 15px; color: #00F7DE;"></i>设置主题</a></li>-->
+<!--            <li class="layui-nav-item layui-hide-xs"><a href=""><i class="layui-icon layui-icon-logout" style="font-size: 15px; color: #00F7DE;"></i>退出</a></li>-->
+            <div style="float:left;"><i class="layui-icon layui-icon-log" style="font-size: 15px; color: #00F7DE;"></i></div>
+            <div id="clock" style="font-weight: bold;color: yellow;float:left;" ></div>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+
+        </ul>
+
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <center><li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                <a href="javascript:;" style="color: #00F7DE">
+                    <br>
+                    <img src="img/image1.jpg" class="layui-nav-img" style="width:80px; height:80px" >
+                    <br>
+                    LJY
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">Your Profile</a></dd>
+                    <dd><a href="">Settings</a></dd>
+                    <dd><a href="">Sign out</a></dd>
+                </dl>
+            </li></center>
+            <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                <a href="javascript:;">
+                    <i class="layui-icon layui-icon-more-vertical"></i>
+                </a>
+            </li>
+
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item" style="background-color:#009688"><a href=""><i class="layui-icon layui-icon-home" style="font-size: 15px; color: #00F7DE;"></i>后台首页</a></li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-layouts" style="font-size: 15px; color: #00F7DE;"></i>我的面板</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-user" style="font-size: 15px; color: #00F7DE;"></i>个人信息</a></dd>
+                        <dd><a href="javascript:;"><i class="layui-icon layui-icon-key" style="font-size: 15px; color: #00F7DE;"></i>修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-set" style="font-size: 15px; color: #00F7DE;"></i>系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">个人信息</a></dd>
+                        <dd><a href="javascript:;">修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-diamond" style="font-size: 15px; color: #00F7DE;"></i>会员管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">个人信息</a></dd>
+                        <dd><a href="javascript:;">修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;"><i class="layui-icon layui-icon-website" style="font-size: 15px; color: #00F7DE;"></i>网络维护</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">个人信息</a></dd>
+                        <dd><a href="javascript:;">修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-link" style="font-size: 15px; color: #00F7DE;"></i>友好链接</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <blockquote class="layui-elem-quote">
+            <div class="layui-input-inline">
+                <input type="text" name="password" lay-verify="pass" placeholder="请输入文章标题进行查询" autocomplete="off" class="layui-input">
+            </div>
+            <button type="button" class="layui-btn layui-btn-primary">查询</button>
+            <button type="button" class="layui-btn ">添加文档</button>
+            <button type="button" class="layui-btn layui-btn-normal">推荐文章</button>
+            <button type="button" class="layui-btn layui-btn-warm">审核文档</button>
+            <button type="button" class="layui-btn layui-btn-danger">批量删除</button>
+            <button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
+            <button class="layui-btn site-demo-active" data-type="tabDelete">删除：用户管理</button>
+            <button class="layui-btn site-demo-active" data-type="tabChange">切换到：订单管理</button>
+        </blockquote>
+        <div class="layui-tab layui-tab-brief" lay-allowclose="true" lay-filter="demo" >
+            <ul class="layui-tab-title" style="background-color:darkgreen">
+                <li class="layui-this" style="color: yellow"><i class="layui-icon layui-icon-util" style="font-size: 15px; color: #00F7DE;"></i>网站设置</li>
+                <li style="color: yellow" lay-id="44"><i class="layui-icon layui-icon-username" style="font-size: 15px; color: #00F7DE;"></i>用户管理</li>
+                <li style="color: yellow">权限分配</li>
+                <li style="color: yellow"><i class="layui-icon layui-icon-cart-simple" style="font-size: 15px; color: #00F7DE;"></i>商品管理</li>
+                <li style="color: yellow" lay-id="22">订单管理</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    1. 高度默认自适应，也可以随意固宽。
+                    <br>2. Tab进行了响应式处理，所以无需担心数量多少。
+                </div>
+                <div class="layui-tab-item"><iframe src="datatable.html" width="100%" height="500px"></iframe></div>
+                <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item">
+                    <div class="layui-carousel" id="test1" lay-filter="test1">
+                        <div carousel-item="">
+                            <div><img src="img/b.jpg" alt=""></div>
+                            <div><img src="img/c.jpg" alt=""></div>
+                            <div><img src="img/d.jpg" alt=""></div>
+                            <div><img src="img/e.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">内容5</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        <center>五邑大学计算机通信网络实习</center>
+    </div>
+</div>
+
+</body>
+<!--时间获取-->
+<script>
+    // 先调用一下防止页面留白
+    var myTime = setTimeout("time() ", 0);
+    function time() {
+        // clearTimeout('myTime')
+        var today = new Date();
+        var hou;
+        var time;
+        var day;
+        if (today.getHours() < 12 && today.getHours() >= 0) {
+            hou = today.getHours();
+            time = "上午";
+        } else if (today.getHours() <= 24 && today.getHours() > 12) {
+            hou = today.getHours() - 12;
+            time = "下午";
+        }
+        var d = today.getDay();
+        if (d == 0) {
+            day = "日";
+        } else if (d == 1) {
+            day = "一";
+        } else if (d == 2) {
+            day = "二";
+        } else if (d == 3) {
+            day = "三";
+        } else if (d == 4) {
+            day = "四";
+        } else if (d == 5) {
+            day = "五";
+        } else if (d == 6) {
+            day = "六";
+        }
+        var minutes = today.getMinutes() > 9 ? today.getMinutes() : '0' + today.getMinutes()
+        var Seconds = today.getSeconds() > 9 ? today.getSeconds() : '0' + today.getSeconds()
+        document.getElementById("clock").innerHTML = (`${today.getFullYear()} 年${(today.getMonth() + 1)}月 ${today.getDate()}日 ${time} ${hou}时  ${minutes}分  ${Seconds}秒  星期${day}`);
+    }
+    var myTime = setInterval("time() ", 1000);
+</script>
+<!--页面-->
+<script>
+
+    layui.use('element', function(){
+        var $ = layui.jquery;
+        var element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+        //触发事件
+        var active = {
+            tabAdd: function(){
+                //新增一个Tab项
+                element.tabAdd('demo', {
+                    title: '用户查询'+ (Math.random()*1000|0) //用于演示
+                    ,content: '内容'+ (Math.random()*1000|0)
+                    ,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+                })
+            }
+            ,tabDelete: function(othis){
+                //删除指定Tab项
+                element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+                // othis.addClass('layui-btn-disabled');
+            }
+            ,tabChange: function(){
+                //切换到指定Tab项
+                element.tabChange('demo', '22'); //切换到：用户管理
+            }
+        };
+
+        $('.site-demo-active').on('click', function(){
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#test=/, '');
+        element.tabChange('test', layid);
+
+        element.on('tab(test)', function(elem){
+            location.hash = 'test='+ $(this).attr('lay-id');
+        });
+
+    });
+</script>
+<!--轮播图-->
+<script>
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel
+            ,form = layui.form;
+
+        //常规轮播
+        carousel.render({
+            elem: '#test1'
+            ,arrow: 'always',
+            width: 533,
+            height: 300,
+            interval: 1000,
+            anim:'fade',
+            anim:'updown'
+        });
+    })
+</script>
+</html>
